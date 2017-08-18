@@ -1,0 +1,20 @@
+<import src="post_item/post_item.wxml"/>
+<view>
+  <swiper indicator-color="rgba(0,0,0,0.5)" indicator-dots="true" autoplay="true" interval="2000" circular="true" catchtap="onSwiperTap">
+    <swiper-item>
+      <image src="https://img3.doubanio.com/view/photo/photo/public/p2391543884.webp" data-post-id="1" ></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="https://gss0.bdstatic.com/94o3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=35dd92a5d739b60059c307e588395e4f/d000baa1cd11728b67031d64cafcc3cec3fd2c4d.jpg" data-post-id="4"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="https://gss3.bdstatic.com/-Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike92%2C5%2C5%2C92%2C30/sign=ce5ff4b7b8fb43160e12722841cd2d46/5d6034a85edf8db13821e8180323dd54564e74bb.jpg" data-post-id="3"></image>
+    </swiper-item>
+  </swiper>
+  <block wx:for="{{post_key}}" wx:for-item="item">
+    <view bindtap="onPostTap" data-post-id="{{item.postId}}">
+    <!-- ...item 将item对象展开，从而在模板文件中不用写item. -->
+      <template is="postItem" data="{{...item}}"/>
+    </view>
+  </block>
+</view>

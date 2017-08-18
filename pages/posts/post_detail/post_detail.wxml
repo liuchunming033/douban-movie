@@ -1,0 +1,28 @@
+<!-- 先静后动，先样式后数据 -->
+<view class="pd_container">
+  <!--第一行-->
+  <!--第一种切换图片的方法-->
+  <image src="{{isMusicPlaying ? postData.music.coverImg : postData.imgSrc}}" class="pd_img" class="pd_image"></image>
+  <image class="pd_audio" catchtap="onMusicTap" src="{{isMusicPlaying ? '/images/music/music-start.png' : '/images/music/music-stop.png'}}"></image>
+  <!--第二行-->
+  <view class="pd_head">
+    <image class="pd_avatar" src="{{postData.avatar}}"></image>
+    <text>{{postData.author}}</text>
+    <text>发表于</text>
+    <text>{{postData.dateTime}}</text>
+  </view>
+  <!--第三行-->
+  <text class="pd_title">{{postData.title}}</text>
+  <!--第四行-->
+  <view class="pd_pos">
+    <view class="pd_share">
+    <!--第二种切换图片的方法-->
+      <image wx:if="{{collected}}" src="/images/icon/collection.png" catchtap="onCollectTap"></image>
+      <image wx:else src="/images/icon/collection-anti.png" catchtap="onCollectTap"></image>
+      <image src="/images/icon/share.png" catchtap="onShareTap"></image>
+    </view>
+    <view class="pd_line"></view>
+  </view>
+  <!--第五行-->
+  <text class="pd_detail" bindt>{{postData.detail}}</text>
+</view>

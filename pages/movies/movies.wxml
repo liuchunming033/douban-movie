@@ -1,0 +1,23 @@
+<!--movies.wxml-->
+<import src="movie-list/movie-list-template.wxml" />
+<import src="movie-grid/movie-grid.wxml"/>
+<view class="searchMovie">
+  <icon type="search" size="15" color="#405f80" class="search-icon"/>
+  <input type="text" placeholder="大护法,神偷奶爸3" class="search-text"
+  placeholder-class="placeholder" bindconfirm="onBindConfirm" bindfocus="onBindFocus" />
+  <image wx:if="{{searchContainer}}" src="../../images/icon/xx.png" class="search-image" bindtap="onCancelSearch"></image>
+</view>
+<view class="movies-container" wx:if="{{movieDetail}}">
+  <view>
+    <template is="movieListTemplate" data="{{...hotMovies}}" />
+  </view>
+  <view>
+    <template is="movieListTemplate" data="{{...comingMovies}}" />
+  </view>
+  <view>
+    <template is="movieListTemplate" data="{{...topMovies}}" />
+  </view>
+</view>
+<view class="searchContent" wx:if="{{searchContainer}}" >
+  <template is="movieGridTemplate" data="{{...searchResult}}"/>
+</view>

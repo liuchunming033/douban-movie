@@ -1,0 +1,3 @@
+<view class="detail-container">
+  <image src="{{movie.image}}" class="head-img" mode="aspectFill"/>
+</view>

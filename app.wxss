@@ -1,0 +1,7 @@
+/*公用的样式放在这里*/
+/*  json文件中不能加注释*/
+text{
+    font-family:'Microsoft Yahei';
+    font-size:24rpx;
+    color:#666;
+}

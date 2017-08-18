@@ -1,0 +1,18 @@
+<!--一行三个图片及评分模板-->
+<import src="../movie/movie-template.wxml" />
+<template name="movieListTemplate" data="">
+  <view class="movie-list-container">
+    <view class="movie-list-top">
+      <text class="movie-list-hot">{{catogeryTitle}}</text>
+      <view class="movie-list-more" catchtap="onMoreTap" data-category="{{catogeryTitle}}">
+        <text>更多</text>
+        <image src="/images/icon/arrowRight.png"></image>
+      </view>
+    </view>
+    <view class="movie-list-list">
+      <block wx:for="{{movies}}" wx:for-item="item">
+        <template is="movieTemplate" data="{{...item}}"/>
+      </block>
+    </view>
+  </view>
+</template>

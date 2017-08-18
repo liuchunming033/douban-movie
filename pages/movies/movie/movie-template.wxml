@@ -1,0 +1,10 @@
+<!--stars.wxml-->
+<!--评分与图片模板-->
+<import src="../stars/stars-template.wxml" />
+<template name="movieTemplate">
+  <view class="movie-container" bindtap="onMovieTap" data-movie-id="{{movieId}}">
+    <image src="{{coverImgUrl}}" class="movie-img"></image>
+    <text class="movie-title">{{title}}</text>
+    <template is="starsTemplate" data="{{average:average,stars:stars}}"></template>
+  </view>
+</template>
