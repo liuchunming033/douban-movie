@@ -1,0 +1,5 @@
+<view class="photo-container">
+    <block  wx:for="{{photos}}" wx:for-item="...item" wx:key="item">
+       <image src="{{url}}" class="photo-image"></image>
+    </block>
+</view>

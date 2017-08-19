@@ -1,10 +1,15 @@
 Page({
-  onTap:function(){
+  onTapToPages: function () {
     /*点击后，切换至post.wxml页面
     wx.redirectTo()重新导向主页面，没有返回按钮
     */
-    wx.redirectTo({
-      url: '../posts/post',
+    wx.switchTab({
+      url: '/pages/posts/post',
     })
+    // redirectTo不能跳转 bug
+    // wx.redirectTo({
+    //   url: '../posts/post',
+    // });
+    console.log(12);
   }
 })

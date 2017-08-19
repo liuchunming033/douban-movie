@@ -52,7 +52,7 @@ Page({
       method: 'GET',
       header: {
         // 填写appalication/json会报错，为空或为其它的不报错，豆瓣API的问题
-        'Content-Type': ' '
+        'Content-Type': 'appalication/xml'
       },
       // 获取数据成功
       success: function (res) {

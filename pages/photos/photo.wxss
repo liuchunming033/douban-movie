@@ -1,0 +1,9 @@
+.photo-container {
+    background-color: #0094ff
+}
+ .photo-image {
+  width: 100%;
+  display: block;
+  margin-bottom:5px;
+  height:600rpx;
+}

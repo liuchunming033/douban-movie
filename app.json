@@ -1,11 +1,13 @@
 {
   "pages": [ 
     "pages/welcome/welcome",
+    "pages/photos/photo",
     "pages/posts/post",
     "pages/movies/movies",
     "pages/movies/movie-detail/movie-detail",
     "pages/movies/moreMovies/moreMovies",
-    "pages/posts/post_detail/post_detail"
+    "pages/posts/post_detail/post_detail",
+    "pages/mine/mine"
   ],
   "window": {
     "navigationBarBackgroundColor": "#405f80"
@@ -15,15 +17,28 @@
     "list": [
       {
         "pagePath": "pages/posts/post",
-        "text": "文章",
+        "text": "文章阅读",
         "selectedIconPath": "images/tab/yuedu_hl.png",
         "iconPath": "images/tab/yuedu.png"
       },
       {
+        "pagePath": "pages/photos/photo",
+        "text": "美女图片",
+        "selectedIconPath": "images/tab/beauty2.png",
+        "iconPath": "images/tab/beauty.png"
+      },
+      {
         "pagePath": "pages/movies/movies",
-        "text": "电影",
+        "text": "豆瓣电影",
         "selectedIconPath": "images/tab/dianying_hl.png",
         "iconPath": "images/tab/dianying.png"
+      }
+      ,
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "会员中心",
+        "selectedIconPath": "images/tab/mine2.png",
+        "iconPath": "images/tab/mine1.png"
       }
     ]
   }
