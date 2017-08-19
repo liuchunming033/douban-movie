@@ -1,4 +1,4 @@
-# 微信小程序制作的豆瓣电影
+# 基于豆瓣API的电影微信小程序
 
 > 紧跟时代潮流，学习新技术
 
@@ -8,14 +8,14 @@
 
 ## 功能
 
-<input type="checkbox" checked> 正在热映<br>
-<input type="checkbox" checked> 即将上映<br>
-<input type="checkbox" checked> top250<br>
-<input type="checkbox" checked> 电影搜索<br>
-<input type="checkbox" checked> 音乐播放<br>
-<input type="checkbox" checked> 文字阅读<br>
-<input type="checkbox"> 电影详情<br>
-<input type="checkbox" > 妹子图片
+- [x] 正在热映
+- [x] 即将上映
+- [x] top250
+- [x] 电影搜索
+- [x] 音乐播放
+- [x] 文字阅读
+- [x] 电影详情
+- [x] 妹子图片
 
 ## API 
 
