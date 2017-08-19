@@ -1,9 +1,9 @@
 <!--view类似div-->
-<view class="container">
+<view class="container" >
   <!--rpx与图片的px大小一比一，可以适应各种机型-->
-  <image class="user-cute" src="https://ws1.sinaimg.cn/large/610dc034ly1ffv3gxs37oj20u011i0vk.jpg"></image>
+  <image class="user-cute" src="https://ws1.sinaimg.cn/large/610dc034gy1fh9utulf4kj20u011itbo.jpg"></image>
   <text class="user-name">Steve</text>
-  <view class="motto" bindtap="onTap">
+  <view class="motto" bindtap="onTapToPages">
     <text class="user-motto">开启小程序</text>
   </view>
 </view>
