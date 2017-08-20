@@ -6,8 +6,7 @@
     "pages/movies/movies",
     "pages/movies/movie-detail/movie-detail",
     "pages/movies/moreMovies/moreMovies",
-    "pages/posts/post_detail/post_detail",
-    "pages/mine/mine"
+    "pages/posts/post_detail/post_detail"
   ],
   "window": {
     "navigationBarBackgroundColor": "#405f80"
@@ -32,13 +31,6 @@
         "text": "豆瓣电影",
         "selectedIconPath": "images/tab/dianying_hl.png",
         "iconPath": "images/tab/dianying.png"
-      }
-      ,
-      {
-        "pagePath": "pages/mine/mine",
-        "text": "会员中心",
-        "selectedIconPath": "images/tab/mine2.png",
-        "iconPath": "images/tab/mine1.png"
       }
     ]
   }
