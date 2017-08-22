@@ -1,5 +1,7 @@
 <view class="photo-container">
-    <block  wx:for="{{photos}}" wx:for-item="...item" wx:key="item">
-       <image src="{{url}}" class="photo-image"></image>
+  <scroll-view class="movie-grid-container" scroll-y='true' bindscrolltolower="getMorePhotos">
+    <block wx:for="{{photos}}" wx:key="index">
+      <image src="{{item.url}}" class="photo-image" mode="widthFix"/>
     </block>
+  </scroll-view>
 </view>

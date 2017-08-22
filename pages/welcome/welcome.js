@@ -10,6 +10,6 @@ Page({
     // wx.redirectTo({
     //   url: '../posts/post',
     // });
-    console.log(12);
+    // console.log(12);
   }
 })

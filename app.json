@@ -1,6 +1,5 @@
 {
   "pages": [ 
-    "pages/welcome/welcome",
     "pages/photos/photo",
     "pages/posts/post",
     "pages/movies/movies",
@@ -22,7 +21,7 @@
       },
       {
         "pagePath": "pages/photos/photo",
-        "text": "美女图片",
+        "text": "图片欣赏",
         "selectedIconPath": "images/tab/beauty2.png",
         "iconPath": "images/tab/beauty.png"
       },

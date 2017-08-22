@@ -2,22 +2,19 @@
 var app = getApp();
 Page({
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
-    photos: []
-  },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
+  data: {
+    photos: [],
+    x: 5,
+    y: 10
+  },
   onLoad: function (options) {
     // 获取图片url
     //http://gank.io/api/data/%E7%A6%8F%E5%88%A9/y/x?imageView2/0/w/100  x = 1 ~ 54 y = 1~10 ?imageView2/0/w/200
     var x = parseInt(Math.random() * 10) || 1;
     var y = parseInt(Math.random() * 54) || 1;
-    var url = app.globalData.gankApi + '/' + x + '/' + y + '?imageView2/0/w/200';
+    var url = app.globalData.gankApi + '/' + this.data.x + '/' + this.data.y;
+    // console.log(url)
     this.getPhotosList(url);
   },
   getPhotosList: function (url) {
@@ -41,33 +38,33 @@ Page({
     })
   },
   processPhotos(res) {
-    console.log(res.data.results);
-    var photos = res.data.results;
-    this.data.photos = this.data.photos.concat(photos);
+    var data = res.data.results || [], totalPhotots;
+    if (!this.data.photos) {
+      totalPhotots = data;
+    }
+    totalPhotots = data.concat(this.data.photos);
 
-    // this.setData({
-    //   photos: res.data.results
-    // })
-    // console.log(this.data.photos[1].url)
+    this.setData({
+      photos: totalPhotots
+    });
+    console.log(totalPhotots);
   },
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
+  getMorePhotos: function () {
+    console.log("加载更多");
+    //上滑加载更多，改变请求参数
 
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+    this.data.y++;
+    if (this.data.y >= 49) {
+      this.data.x++;
+      this.data.y = 1;
+    }
+    if (this.data.x >= 10) {
+      return alert("没有图片了");
+    }
+    var dataUrl = app.globalData.gankApi + '/' + this.data.x + '/' + this.data.y;
+    console.log(dataUrl);
+    this.getPhotosList(dataUrl);
+    //显示加载loading
+    wx.showNavigationBarLoading();
   }
 })

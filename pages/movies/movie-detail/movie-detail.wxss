@@ -1,3 +1,4 @@
+@import "../stars/stars-template.wxss";
 .detail-container{
   display: flex;
   flex-direction: column;
@@ -5,4 +6,20 @@
 .head-img{
   height:320rpx;
   width:100%;
+}
+.detail-content{
+  margin:0 10px ;
+  display: flex;
+  flex-direction: column;
+  font-size: 45rpx;
+}
+.detail-content text{
+  margin: 5px 0;
+}
+.detail-rating{
+  display: flex;
+  flex-direction: row;
+}
+.detail-summary{
+  font-weight: 700;
 }

@@ -1,3 +1,15 @@
+<import src="../stars/stars-template.wxml" />
 <view class="detail-container">
-  <image src="{{movie.image}}" class="head-img" mode="aspectFill"/>
+  <image src="{{movie.image}}" class="head-img" mode="widthFix" />
+  <view class="detail-content">
+      <text>导演：{{movie.director.name}}</text>
+      <text>主演：{{movie.casts}}</text>
+      <text>类型：{{movie.genre}}</text>
+      <text>国家：{{movie.country}}</text>
+      <view class="detail-rating">
+        <text>评分：</text>
+        <template is="starsTemplate" data="{{average:movie.average,stars:movie.rating}}"/>
+      </view>
+      <text class="detail-summary">剧情简介：{{movie.summary}}</text>
+  </view>
 </view>
