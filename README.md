@@ -18,7 +18,23 @@
 - [X] 电影详情
 - [X] 上滑加载更多
 
-## API 
+## 功能截图
+
+![首页](scan/首页.PNG)
+
+![文字详情](scan/文字详情页.PNG)
+
+![电影列表](scan/电影列表页.PNG)
+
+![电影详情](scan/电影详情页.PNG)
+
+![电影搜索](scan/电影搜索页.PNG)
+
+![图片欣赏](scan/图片欣赏页.PNG)
+
+
+
+## API
 
 - 豆瓣API [https://api.douban.com](https://api.douban.com)
 - 干货集中营API [http://gank.io/api](http://gank.io/api)
