@@ -47,7 +47,7 @@ Page({
     this.setData({
       photos: totalPhotots
     });
-    console.log(totalPhotots);
+    // console.log(totalPhotots);
   },
   getMorePhotos: function () {
     console.log("加载更多");

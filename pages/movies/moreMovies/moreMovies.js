@@ -100,5 +100,14 @@ Page({
     wx.hideNavigationBarLoading();
     //取消下拉刷新状态
     wx.stopPullDownRefresh();
+  },
+  onMovieTap: function (event) {
+    //跳转到每个电影详情页面
+    var movieId = event.currentTarget.dataset.movieId;
+    // console.log(category);
+    wx.navigateTo({
+      //传递电影 Id
+      url: '../movie-detail/movie-detail?id=' + movieId
+    })
   }
 })

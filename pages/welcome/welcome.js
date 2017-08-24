@@ -7,7 +7,7 @@ Page({
       wx.switchTab({
         url: '/pages/posts/post',
       })
-    },2000);
+    },1500);
     // redirectTo不能跳转 bug
     // wx.redirectTo({
     //   url: '../posts/post',
